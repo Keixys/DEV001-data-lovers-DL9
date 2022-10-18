@@ -7,13 +7,20 @@ import data from './data/ghibli/ghibli.js';
 console.log(data.films);
 
 const datos = data
-const template = document.querySelector("#lista").content
+const contenido = document.querySelector("#lista")
 const fragment = document.createDocumentFragment()
 
-data.films.forEach(titulo => {
-    template.querySelector('#titulo').textContent = titulo  
-    const clone = template.cloneNode(true)
-    fragment.appendChild(clone)
+data.films.forEach(film => {
+    const titulo = document.createElement("p")
+    titulo.textContent=film.title;
+    const imagen = document.createElement("img")
+    imagen.src = film.poster;
+
+    const pelicula = document.createElement("div")
+    pelicula.appendChild(titulo)
+    pelicula.appendChild(imagen)
+
+    fragment.appendChild(pelicula)
 })
 
-template.appendChild(fragment)
+contenido.appendChild(fragment)
