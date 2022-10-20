@@ -50,14 +50,25 @@ body {
     width: calc(90% + var(--gap));
 }
 
-#lista>div {
+#lista>.marco {
     /* margin: var(--gap) 0 0 var(--gap); */
     width: 300px;
     height: 400px;
-   
+
 }
 
-#lista>div img{
+#lista>.div img {
     width: 80%;
     height: 80%;
+}
+
+.marco {
+    background-color: aqua;
+    padding: 10px;
+}
+
+@media (max-width: 800px) {
+.marco {
+        flex-direction: column;
+    }
 }
