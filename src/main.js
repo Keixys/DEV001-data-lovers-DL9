@@ -6,21 +6,23 @@ import data from './data/ghibli/ghibli.js';
 
 console.log(data.films);
 
-const datos = data
+
 const contenido = document.querySelector("#lista")
 const fragment = document.createDocumentFragment()
 
 data.films.forEach(film => {
     const titulo = document.createElement("p")
-    titulo.textContent=film.title;
+    titulo.textContent = film.title;
     const imagen = document.createElement("img")
     imagen.src = film.poster;
 
     const pelicula = document.createElement("div")
     pelicula.appendChild(titulo)
     pelicula.appendChild(imagen)
-
-    fragment.appendChild(pelicula)
+    const marco = document.createElement("div")
+    marco.appendChild(pelicula)
+    marco.classList.add("marco")
+    fragment.appendChild(marco)
 })
 
 contenido.appendChild(fragment)
