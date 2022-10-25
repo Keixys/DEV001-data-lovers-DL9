@@ -14,16 +14,19 @@
 //   return 'OMG';
 // };
 
-export const filtrodefechas = (datapelicula,fecha) => {
-datapelicula.filter(movie => {
-  if (movie.release_date === fecha) { 
-      return movie;
-    }
-  
-})
+export const filtrodedirector = (datapelicula,director) => {
+  return datapelicula.filter(cadadirector => {
+    console.log("director", cadadirector.release_date)
+    console.log("director",director)
+    if (cadadirector.director === director) { 
+        return cadadirector;
+      }
+      
+      }
+   
+  )
 
 }
-
 ;
 // }
 // export default datalover;
