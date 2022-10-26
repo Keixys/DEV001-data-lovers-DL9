@@ -14,12 +14,13 @@
   
 </div>
 
+<a type="button" id="verinicio"  href="./index.html" target = "_blank">INICIO</a> 
+
 <body>
 
   <div class="titulos">
     <h2>PELICULAS</h2>
-
-
+    
     <select name="transporte" id ="filtro">
       <option disabled selected="" >selecciona un director</option>
       <option>Todas las peliculas</option>
@@ -29,9 +30,10 @@
       <option>Hiroyuki Morita</option>
       <option>Gorō Miyazaki</option>
       <option>Hiromasa Yonebayashi</option>
-    
+      <option id="reset">ver todas las peliculas</option>
       </select>
-      <button type="reset">Reset</button>
+
+      <button onClick="window.location.reload();">RESET</button>
    
     <div class="contenido" id="lista">
     </div>
