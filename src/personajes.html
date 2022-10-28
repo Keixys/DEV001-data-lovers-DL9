@@ -12,7 +12,7 @@
     <h1 id="titulo"> WORLD GHIBLI</h1>
 
     <ul class="enlace">
-      <li><a type="button" id="verinicio" href="./index.html" target="_blank">INICIO</a></li>
+      <li><a type="button" id="verinicio" href="./index.html">INICIO</a></li>
          
     </ul>
    
@@ -24,7 +24,7 @@
   <div class="titulos">
     <h2>PERSONAJES</h2>
 
-    <select class=filtro id="filtropersonaje">
+    <select class="filtro" id="filtropersonaje">
       <option disabled selected="">Selecciona una pelicula</option>
       <option>Todos los personajes</option>
       <option>Castle in the Sky </option>
@@ -47,7 +47,43 @@
       <option>The Wind Rises</option>
       <option>The Tale of the Princess Kaguya</option>
       <option>When Marnie Was There</option>
+    </select>
 
+    <select class="filtro" id="filtroGenero">
+      <option disabled selected="">Selecciona un género</option>
+      <option>Female</option>
+      <option>Male</option>
+    </select>
+
+    <select class="filtro" id="filtroEspecie">
+      <option disabled selected="">Selecciona una especie</option>
+      <option>Human</option>
+      <option>Totoro</option>
+      <option>Cat</option>
+      <option>Witch</option> 
+      <option>Witch/ Human</option>
+      <option>Demon</option>
+      <option>Human/ Scare Crow</option>
+      <option>Dog</option>
+      <option>Fish/ Human</option>
+      <option>Deity</option>
+      <option>Raccoon Dog</option>
+      <option>Red elk</option>
+      <option>Spirit</option>
+      <option>Wolf</option>
+      <option>Deity Dragon</option>
+      <option>Spirit of The Write Fox</option>
+      <option>Borrower</option>
+      <option>Unknown</option>
+      <option>Bird</option>
+      <option>Wizard</option>
+
+    </select>
+
+    <select class= "filtro" id ="ordenarPer">
+      <option disabled selected="" >Ordenar</option>
+      <option>A a la Z</option>
+      <option>Z a la A</option>
     </select>
 
     <button onClick="window.location.reload();">Reset</button>   

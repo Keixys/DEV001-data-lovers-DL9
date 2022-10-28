@@ -42,6 +42,7 @@ contenido.innerHTML=""
 })
 
 
+
 todoslosdatos.forEach(film => {
    const titulo = document.createElement("p")
    titulo.textContent = film.title;
@@ -62,6 +63,6 @@ todoslosdatos.forEach(film => {
    marco.classList.add("marco")
    fragment.appendChild(marco)
 })
-contenido.appendChild(fragment)
+ contenido.appendChild(fragment)
 
 
