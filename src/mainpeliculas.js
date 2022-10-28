@@ -4,25 +4,38 @@ import { filtrodedirector } from './data.js';
 const contenido = document.querySelector("#lista")
 const fragment = document.createDocumentFragment()
 
-const todoslosdatos= data.films;
+const todosLosDatos = data.films;
+const peliculasDatos = [...todosLosDatos]
 
 
 
 const filtro = document.getElementById("filtro")
 filtro.addEventListener("change", (event) => {
-const fdirectores = filtrodedirector (todoslosdatos, event.target.value);
+   const fdirectores = filtrodedirector(todosLosDatos, event.target.value);
 
-contenido.innerHTML=""
-   fdirectores.forEach(film => {
+   contenido.innerHTML = ""
+   cartaPeliculas(fdirectores)
+})
+
+const ordenarPel = document.querySelector("#ordenarPel")
+ordenarPel.addEventListener("change", (event) => {
+    const oPel=  (peliculasDatos, event.target.value);
+    contenido.innerHTML=""
+    cartaPeliculas(oPel)
+
+})
+
+function cartaPeliculas(todoslosdatos) {
+   todoslosdatos.forEach(film => {
       const titulo = document.createElement("p")
       titulo.textContent = film.title;
       const imagen = document.createElement("img")
       imagen.src = film.poster;
       const yearlanzamiento = document.createElement("p")
-      yearlanzamiento.textContent = film.release_date;
+      yearlanzamiento.textContent = film.release_date
       const directorpeli = document.createElement("p")
       directorpeli.textContent = film.director;
-      
+
       const pelicula = document.createElement("div")
       pelicula.appendChild(imagen)
       pelicula.appendChild(titulo)
@@ -32,18 +45,12 @@ contenido.innerHTML=""
       marco.appendChild(pelicula)
       marco.classList.add("marco")
       fragment.appendChild(marco)
-  
-     //   console.log(filtrodefechas)
-      
-  })
-  
-  contenido.appendChild(fragment)
-
-})
+   })
+   contenido.appendChild(fragment)
+}
 
 
-
-todoslosdatos.forEach(film => {
+todosLosDatos.forEach(film => {
    const titulo = document.createElement("p")
    titulo.textContent = film.title;
    const imagen = document.createElement("img")
@@ -51,7 +58,7 @@ todoslosdatos.forEach(film => {
    const yearlanzamiento = document.createElement("p")
    yearlanzamiento.textContent = film.release_date
    const directorpeli = document.createElement("p")
-      directorpeli.textContent = film.director;
+   directorpeli.textContent = film.director;
 
    const pelicula = document.createElement("div")
    pelicula.appendChild(imagen)
@@ -63,6 +70,6 @@ todoslosdatos.forEach(film => {
    marco.classList.add("marco")
    fragment.appendChild(marco)
 })
- contenido.appendChild(fragment)
+contenido.appendChild(fragment)
 
 
