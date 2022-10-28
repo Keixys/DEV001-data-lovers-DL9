@@ -1,22 +1,41 @@
 import data from './data/ghibli/ghibli.js';
-import { filtrodepersonaje, ordenAyZ } from './data.js';
+import { filtrodepersonaje, ordenAyZ,filtrodegenero, filtrodeespecie}  from './data.js';
 
 const contenido = document.querySelector("#listapersonajes")
 const fragment = document.createDocumentFragment()
 
 const todoslospersonajes = data.films;
+const datapersonaje = todoslospersonajes.people
+
 
 const filtropersonaje = document.getElementById("filtropersonaje")
 filtropersonaje.addEventListener("change", (event) => {
     const fpersonajes = filtrodepersonaje (todoslospersonajes, event.target.value);
     contenido.innerHTML=""
-    carta(fpersonajes)
+    carta(fpersonajes) 
+})
+// const resultado= filtrodegenero(data)
+// console.log (resultado)
+const filtroGenero= document.querySelector("#filtroGenero")
+filtroGenero.addEventListener("change", (event) => {
+    const fGenero = filtrodegenero (datapersonaje, event.target.value);
+    contenido.innerHTML=""
+    carta(fGenero)  
 
 })
 
+const filtroEspecie= document.querySelector("#filtroEspecie")
+filtroEspecie.addEventListener("change", (event) => {
+    const fEspecie = filtrodeespecie (datapersonaje, event.target.value);
+    contenido.innerHTML=""
+    console.log (carta(fEspecie))
+    console.log (fEspecie)
+})
+
+
 const ordenarPer = document.querySelector("#ordenarPer")
 ordenarPer.addEventListener("change", (event) => {
-    const oPer= ordenAyZ (todoslospersonajes, event.target.value);
+    const oPer= ordenAyZ (datapersonaje, event.target.value);
     contenido.innerHTML=""
     carta(oPer)
 
