@@ -24,8 +24,8 @@ export const filtrodedirector = (datapelicula, director) => {
   }
   )
 }
-export const filtrodepersonaje = (datapersonaje, nombredepelicula) => {
-  return datapersonaje.filter(cadatitulo => {
+export const filtrodepersonaje = (datapelicula, nombredepelicula) => {
+  return datapelicula.filter(cadatitulo => {
     // console.log("title", cadatitulo.title)
     // console.log("title", cadatitulo)
     if (cadatitulo.title === nombredepelicula) {
@@ -34,17 +34,39 @@ export const filtrodepersonaje = (datapersonaje, nombredepelicula) => {
   }
   )
 }
-export const filtrodegenero = (datapersonaje, nombredegenero)=> {
-  console.log (datapersonaje)
-  return datapersonaje.filter(cadaGenero => {
-    console.log("gender", cadaGenero.gender)
-    console.log("gender", cadaGenero)
-    if (cadaGenero.gender == nombredegenero){
-      return cadaGenero;
-    }
-  }
-  )
+export const filtrodegenero = (datadepelicula, nombreDeGenero)=> {
+  const todoslospersonajes =[]
+  datadepelicula.forEach(film => {
+    const personajes = film.people.filter(personaje =>{
+      if(personaje.gender === nombreDeGenero){
+        return personaje;
+      }
+    })
+    todoslospersonajes.push(personajes)
+  });
+  console.log(todoslospersonajes.flat())
 }
+//   datapelicula.forEach(film => {
+//     film.people.forEach(personaje => {
+//    personaje.filter(cadaGenero => {
+//       if (cadaGenero.gender == nombredegenero){
+//         return cadaGenero;
+//       }
+//     })
+//     });
+//   })
+
+// }
+
+//   return datapersonaje.filter(cadaGenero => {
+//     console.log("gender", cadaGenero.gender)
+//     console.log("gender", cadaGenero)
+//     if (cadaGenero.gender == nombredegenero){
+//       return cadaGenero;
+//     }
+//   }
+//   )
+// }
 
 export const filtrodeespecie = (datapersonaje, nombredeespecie) => {
   return datapersonaje.filter(cadaEspecie => {
