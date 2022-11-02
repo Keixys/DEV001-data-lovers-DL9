@@ -6,65 +6,75 @@
   <meta charset="utf-8">
   <title>Data Lovers</title>
 </head>
+
 <body>
-<header>
+  <header>
+    <nav class="encabezado">
+      <h1 id="titulo"> WORLD GHIBLI</h1>
+      <ul class="enlace">
+        <li><a type="button" id="verPeliculas" href="./peliculas.html">PELICULAS</a></li>
+        <li><a type="button" id="verPersonajes" href="./personajes.html">PERSONAJES</a></li>
+      </ul>
 
-<nav class="encabezado">
-   <h1 id="titulo"> WORLD GHIBLI</h1> 
-   <ul class="enlace">
-  <li><a type="button" id="verPeliculas"  href="./peliculas.html" >PELICULAS</a></li> 
-  <li><a type="button" id="verPersonajes"  href="./personajes.html">PERSONAJES</a></li>
-</ul>
+      <button class="ham" type=" button">
+        <span class="linea1"></span>
+        <span class="linea2"></span>
+        <span class="linea3"></span>
+      </button>
+    </nav>
+  </header>
 
-<button class="ham" type=" button">
-  <span class= "linea1"></span>
-  <span class= "linea2"></span>
-  <span class= "linea3"></span>
+  <div class="slider">
+    <ul>
+      <li> <img src= "img/12.jpeg" alt =""></li>
+      <li> <img src= "img/10.png" alt =""></li>
+      <li> <img src= "img/1.jpeg" alt =""></li>
+      <li> <img src= "img/4.webp" alt =""></li>
+    </ul>
+  </div>
 
-</button>
-</nav>
-</header>
 
-<br>
-  <div id="introduccion">
+  <!-- <div id="introduccion">
   <p id="bienvenida"> Bienvenidos al mundo del Studio Ghibli. Aqui encontrarás todas las películas
     que te introducirán en una maravillosa aventura llena de imaginación </p>
     <br>
     <br>
-    <br> 
- </div>
+    <br>  
+ </div> -->
 
- <div style="height:250px"></div>
- <nav class="encabezado">
-  <h2 id= "titulo"> Vive una experiencia Ghibli</h2> 
-</nav>
+  <!-- <div style="height:250px"></div> -->
+  <nav class="encabezado">
+    <h2 id="titulo"> Vive una experiencia Ghibli</h2>
+  </nav>
 
   <div id="Vpeli" class="ventanas">
-    <p > Ve todas las peliculas del Studio Ghibli </p>
+    <p> Ve todas las peliculas del Studio Ghibli </p>
     <ul class="enlace">
-    <li><a type="button" href="./peliculas.html" > VE TODAS LAS PELICULAS</a></li>
-  </ul>
+      <li><a type="button" href="./peliculas.html"> VE TODAS LAS PELICULAS</a></li>
+    </ul>
   </div>
 
-  <div id= "Vperso" class="ventanas">
-    <p >Conoce todos los personajes del Studio Ghibli </p>
+  <div id="Vperso" class="ventanas">
+    <p>Conoce todos los personajes del Studio Ghibli </p>
     <ul class="enlace">
-    <li><a type="button"   href="./personajes.html" >VE TODOS LOS PERSONAJES</a> </li>
- </ul>
-</div>
+      <li><a type="button" href="./personajes.html">VE TODOS LOS PERSONAJES</a> </li>
+    </ul>
+  </div>
 
 
 
 
 
-    <!-- <template name="lista" id = "lista">
+  <!-- <template name="lista" id = "lista">
       <p id= "titulo">${titulo}</p>
       <img src ="" alt="">  
     </template> -->
 
-    <script src="main.js" type="module"></script>
-</body>
+  <script src="main.js" type="module"></script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css" />
-
+</body>
 </html>
