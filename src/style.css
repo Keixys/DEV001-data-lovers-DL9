@@ -1,16 +1,63 @@
 body {
-    background-color: #f3f3f3;
+    background-color: #e9d3cc;
+
 }
 
-#titulo {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 70px;
-    color: #2d5b88;
+.encabezado {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 30px;
+    color: black;
+    padding: 0  
+                                                                                                                                                                                            ;
+}
+ 
+.slider {
+    width: 95%;
+    margin: auto;
+    overflow: hidden;  /* para que las otras imagenes no se vean*/
 }
 
+.slider ul {
+    display: flex;
+    padding: 0;
+    width: 400%;   /* porque son 4 imagenes*/
+    
+    animation: cambiar 20s infinite alternate;
+
+    /* se pone alternate para que cuando llegue a la ultima imgaen retroceda 
+    y no cambie bruscamente */
+   animation-timing-function: ease-in;
+}
+.slider li {
+    width: 100%;
+     ist-style: none; /*se le quita los puntos de lista */
+
+}
+.slider img {
+    width: 100%;
+  
+
+}
+/* las paradas */
+@keyframes cambiar {
+    /* para que la priemra imagen no se mueva, osea que del 0 al 20% este la primera imagen 
+    un 20% de 20 segundos, osea 4 segundos*/
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+/* 5% será la tarnsicion osea 5% de 20 segundos  */
+/* porque cada imagen ocupa el 100%, */
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+/* se pone -200% para que se vea la tercera imagen  */
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
 
 #bienvenida {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 45px;
     text-align: center;
     color: #0a223a;
@@ -20,28 +67,31 @@ body {
     display: flex;
     text-align: right;
 }
+
 nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
     min-height: 8vh;
-    background-color: #dbd2cf;
+    background-color: #e9d3cc;
+    padding: 0;
 }
+
 .enlace li {
-    padding: 10px 10px;
+    padding: 0;
     list-style-type: none;
     transition: 0.5s;
-    
-    
+
+
 }
-.enlace li a{
-    margin-left: 30px;
+
+.enlace li a {
+    margin-left: 50px;
     list-style-type: none;
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
     padding: 10px 5px;
-    background-color: #2d5b88;
-    color: #f2f4f6;
+    background-color: black;
+    color: #e9d3cc;
     text-decoration: none;
     width: 100px;
     font-weight: 700;
@@ -51,35 +101,35 @@ nav {
 
 .enlace li :hover {
     background-color: transparent;
-    border: 2px solid #2d5b88;
-    Color: #2d5b88;
+    Color: black
 
 }
 
 
-#introduccion {
+/* #introduccion {
     padding: 130px;
-    background-image: url(imagen.jpg);
-    
-   
-}
+    background-image: url(imagen.jpg); */
+
+
+/* } */
 
 #verPeliculas {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 20px;
     align-content: center;
 
 }
 
 .titulos {
-    font-family: Arial, Helvetica, sans-serif;
+    flex: block;
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 45px;
     text-align: center;
-    color: #f3f5f8;
+    color: black
 }
 
 h2 {
-    color: #2d5b88;
+    color: black
 }
 
 .contenido {
@@ -109,61 +159,66 @@ h2 {
     padding: 15px;
 }
 
-.ventanas{
-    display:inline-block;
-    justify-content:center;
+.ventanas {
+    display: inline-block;
+    justify-content: center;
     font-size: 50px;
-    font-family: Arial, Helvetica, sans-serif;
-    color:#0a223a;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #0a223a;
     padding: 100px;
     font-weight: 500;
     flex-direction: column;
-    text-align:center; 
+    text-align: center;
     width: 400px;
     height: 400px;
     margin: 52px;
-    
+
 }
-#Vpeli{
+
+#Vpeli {
     background-image: url(Imagen1.jpg);
-    background-size: cover;   
+    background-size: cover;
 }
-#Vperso{
+
+#Vperso {
     background-image: url(Imagen2.jpg);
     background-size: cover;
 }
-.ham{
-    display:none;
+
+.ham {
+    display: none;
     cursor: pointer;
-    border:none;
-    margin:0%;
+    border: none;
+    margin: 0%;
     padding: 0;
     background-color: transparent;
 }
-.ham span{
-    display:block;
+
+.ham span {
+    display: block;
     background-color: #2d5b88;
     height: 3px;
     width: 28px;
     margin: 10px auto;
     border-radius: 2px;
 }
-.filtro{
-    display:block;
-    font-family: Arial, Helvetica, sans-serif;
+
+.filtro {
+    display: flexbox;
+    font-family: 'Roboto Condensed', sans-serif;
     border-radius: 10px;
-    background-color: #2d5b88;
+    background-color: black;
     color: #f2f4f6;
     font-weight: 700;
     font-size: 20px;
 
 }
 
-button{
-    display:block;
-    font-family: Arial, Helvetica, sans-serif;
+button {
+    display: block;
+    font-family: 'Roboto Condensed', sans-serif;
     border-radius: 10px;
-    background-color: #2d5b88;
+    background-color: black;
     color: #f2f4f6;
     font-weight: 700;
     font-size: 15px;
@@ -172,51 +227,59 @@ button{
 
 @media (max-width: 800px) {
 
-    
+
     .encabezado {
         padding-left: 5px;
     }
-   
-    .ham{
+
+    .ham {
         display: block;
         position: absolute;
-        top:15px;
-        right:25px;
+        top: 15px;
+        right: 25px;
     }
-    nav{ 
+
+    nav {
         flex-direction: column;
         align-items: flex-start;
         padding-top: 25px 0;
     }
+
     .enlace {
-        flex-direction:column;
+        flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        height:92vh;
-        margin:0;
+        height: 92vh;
+        margin: 0;
         padding: 0;
         width: 100%;
         display: none;
- 
+
     }
-    .enlace li{
-        width:100%;
+
+    .enlace li {
+        width: 100%;
         text-align: center;
         padding: 20px;
     }
+
     .marco {
         flex-direction: column;
     }
-    .enlace.activado{
-        display:flex;
+
+    .enlace.activado {
+        display: flex;
     }
-    .linea1.animado{
-        transform:rotate(-45deg) translate(-10px,8px);
+
+    .linea1.animado {
+        transform: rotate(-45deg) translate(-10px, 8px);
     }
-    .linea2.animado{
+
+    .linea2.animado {
         opacity: 0;
     }
-    .linea3.animado{
-        transform: rotate(45deg)translate(-10px,-8px);
+
+    .linea3.animado {
+        transform: rotate(45deg)translate(-10px, -8px);
     }
 }

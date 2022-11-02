@@ -34,6 +34,8 @@ export const filtrodepersonaje = (datapelicula, nombredepelicula) => {
   }
   )
 }
+
+
 export const filtrodegenero = (datadepelicula, nombreDeGenero)=> {
   const todoslospersonajes =[]
   datadepelicula.forEach(film => {
@@ -44,8 +46,53 @@ export const filtrodegenero = (datadepelicula, nombreDeGenero)=> {
     })
     todoslospersonajes.push(personajes)
   });
-  console.log(todoslospersonajes.flat())
+  return todoslospersonajes.flat()
 }
+
+export const filtrodeespecie = (dataDePersonaje, nombreDeEspecie) => {
+  const todoslospersonajes =[]
+  dataDePersonaje.forEach(film => {
+    const especie = film.people.filter (especie =>{
+      if(especie.specie === nombreDeEspecie){
+
+        return especie;
+      }
+    })
+    todoslospersonajes.push(especie)
+  });
+  return todoslospersonajes.flat()
+}
+
+
+export const ordenAyZ = (datadepelicula) => {
+  const ordendepersonajes =[]
+  datadepelicula.forEach(film=> {
+   const resultado = film.people.sort((a, b) =>{
+     if (a.name < b.name) {
+       return -1
+     }
+     if (a.name > b.name) {
+       return 1
+     }
+     if(a.name === b.name ){
+     return 0 
+    }
+return resultado
+   })
+  ordendepersonajes.push(resultado)
+   console.log (resultado)
+ });
+  return ordendepersonajes.flat()
+
+}
+
+
+  // return datapersonaje.filter(cadaEspecie => {
+  //    console.log("specie", cadaEspecie.specie)
+  //    console.log("specie", cadaEspecie)
+  //   if (cadaEspecie.specie === nombredeespecie) {
+  //     return cadaEspecie;
+    
 //   datapelicula.forEach(film => {
 //     film.people.forEach(personaje => {
 //    personaje.filter(cadaGenero => {
@@ -68,27 +115,3 @@ export const filtrodegenero = (datadepelicula, nombreDeGenero)=> {
 //   )
 // }
 
-export const filtrodeespecie = (datapersonaje, nombredeespecie) => {
-  return datapersonaje.filter(cadaEspecie => {
-     console.log("specie", cadaEspecie.specie)
-     console.log("specie", cadaEspecie)
-    if (cadaEspecie.specie === nombredeespecie) {
-      return cadaEspecie;
-    }
-  }
-  )
-}
-
-
-// export const ordenAyZ = (datadepelicula) => {
-//  return datadepelicula.sort(function (a, b) {
-//     if (a.name < b.name) 
-//       return -1
-    
-//     if (a.name > b.name) {
-//       return 1
-//     }
-//     return 0 
-//   })
-
-// }
