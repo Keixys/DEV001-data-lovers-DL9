@@ -86,10 +86,75 @@ export const ordenZaA = (datadepelicula) => {
       return resultado
     })
     ordendepersonajes.push(resultado)
-    
+
   });
-  
+
   return ordendepersonajes.flat()
 
 }
+
+export const ordenAyZpel = (datadepeliculas) => {
+  const resultado1 = datadepeliculas.sort((a, b) => {
+    if (a.title < b.title) {
+      return -1
+    }
+    if (a.title > b.title) {
+      return 1
+    }
+    if (a.title === b.title) {
+      return 0
+    }
+    return resultado1
+  })
+  resultado1.push()
+
+  return resultado1.flat()
+}
+
+export const ordenZyApel = (datadepeliculas) => {
+  const resultado2 = datadepeliculas.sort((a, b) => {
+    if (a.title < b.title) {
+      return 1
+    }
+    if (a.title > b.title) {
+      return -1
+    }
+    if (a.title === b.title) {
+      return 0
+    }
+    return resultado2
+  })
+  resultado2.push()
+
+  return resultado2.flat()
+}
+
+
+export const ordenPopularity = (datadepeliculas) => {
+  const resultado4 = datadepeliculas.sort((a, b) => {
+    return b.rt_score - a.rt_score}
+  )
+  resultado4.push()
+
+  return resultado4.flat()
+}
+
+export const ordenYear = (datadepeliculas) => {
+  const resultado3 = datadepeliculas.sort((a, b) => {
+    if (a.release_date < b.release_date) {
+      return 1
+    }
+    if (a.release_date > b.release_date) {
+      return -1
+    }
+    if (a.release_date === b.release_date) {
+      return 0
+    }
+    return resultado3
+  })
+  resultado3.push()
+
+  return resultado3.flat()
+}
+
 
