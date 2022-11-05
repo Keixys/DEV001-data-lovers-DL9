@@ -1,4 +1,4 @@
-import { filtrodedirector, filtrodepersonaje, filtrodegenero, filtrodeespecie, ordenAyZ, ordenZaA, ordenAyZpel } from '../src/data.js';
+import { filtrodedirector, filtrodepersonaje, filtrodegenero, filtrodeespecie, ordenAyZ, ordenZaA, ordenAyZpel, ordenZyApel, ordenPopularity, ordenYear } from '../src/data.js';
 
 //Describe sirve para agrupar muchos test que estan relacionados con la misma cosa)
 describe('filtrodedirector', () => {
@@ -94,103 +94,194 @@ describe('filtrodeespecie', () => {
 
 describe('ordenAyZ', () => {
   //it es cada caso de testeo
-  it('ordenar los personajes de la A a la Z',() => {
-    
+  it('ordenar los personajes de la A a la Z', () => {
+
     let namPrueba = [
-      {nombrePeli: 'pel',
-      people: [
-    { name:'Satsuki Kusakabe' },
-    { name:'Dola' },
-    { name:'Yasuko Kusakabe' },
-    { name:'Chu Totoro' },
-  ]}
-]   
-    let orden = [
-      {nombrePeli: 'pel1',
-      people: [
-    { name:'Chu Totoro' },
-    { name:'Dola' },
-    { name:'Satsuki Kusakabe' },
-    { name:'Yasuko Kusakabe' },
-  ]}
-]
-    let resultadoEsperado = [
-      { name:'Chu Totoro' },
-      { name:'Dola' },
-      { name:'Satsuki Kusakabe' },
-      { name:'Yasuko Kusakabe' },
+      {
+        nombrePeli: 'pel',
+        people: [
+          { name: 'Satsuki Kusakabe' },
+          { name: 'Dola' },
+          { name: 'Yasuko Kusakabe' },
+          { name: 'Chu Totoro' },
+        ]
+      }
     ]
-    let resultadoReal = ordenAyZ(namPrueba,orden)
+    let orden = [
+      {
+        nombrePeli: 'pel1',
+        people: [
+          { name: 'Chu Totoro' },
+          { name: 'Dola' },
+          { name: 'Satsuki Kusakabe' },
+          { name: 'Yasuko Kusakabe' },
+        ]
+      }
+    ]
+    let resultadoEsperado = [
+      { name: 'Chu Totoro' },
+      { name: 'Dola' },
+      { name: 'Satsuki Kusakabe' },
+      { name: 'Yasuko Kusakabe' },
+    ]
+    let resultadoReal = ordenAyZ(namPrueba, orden)
     //Yo espero que resultadoReal sea igual al resultadoEsperado
-     expect (resultadoReal).toEqual(resultadoEsperado)
-});
+    expect(resultadoReal).toEqual(resultadoEsperado)
+  });
 })
 
 describe('ordenZaA', () => {
   //it es cada caso de testeo
-  it('ordenar los personajes de la Z a la A',() => {
-    
+  it('ordenar los personajes de la Z a la A', () => {
+
     let namPrueba = [
-      {nombrePeli: 'pel',
-      people: [
-    { name:'Satsuki Kusakabe' },
-    { name:'Dola' },
-    { name:'Yasuko Kusakabe' },
-    { name:'Chu Totoro' },
-  ]}
-]   
-    let orden = [
-      {nombrePeli: 'pel1',
-      people: [
-    { name:'Yasuko Kusakabe' },
-    { name:'Satsuki Kusakabe' },
-    { name:'Dola' },
-    { name:'Chu Totoro'},
-  ]}
-]
-    let resultadoEsperado = [
-      { name:'Yasuko Kusakabe' },
-      { name:'Satsuki Kusakabe' },
-      { name:'Dola' },
-      { name:'Chu Totoro'},
+      {
+        nombrePeli: 'pel',
+        people: [
+          { name: 'Satsuki Kusakabe' },
+          { name: 'Dola' },
+          { name: 'Yasuko Kusakabe' },
+          { name: 'Chu Totoro' },
+        ]
+      }
     ]
-    let resultadoReal = ordenZaA(namPrueba,orden)
+    let orden = [
+      {
+        nombrePeli: 'pel1',
+        people: [
+          { name: 'Yasuko Kusakabe' },
+          { name: 'Satsuki Kusakabe' },
+          { name: 'Dola' },
+          { name: 'Chu Totoro' },
+        ]
+      }
+    ]
+    let resultadoEsperado = [
+      { name: 'Yasuko Kusakabe' },
+      { name: 'Satsuki Kusakabe' },
+      { name: 'Dola' },
+      { name: 'Chu Totoro' },
+    ]
+    let resultadoReal = ordenZaA(namPrueba, orden)
     //Yo espero que resultadoReal sea igual al resultadoEsperado
-     expect (resultadoReal).toEqual(resultadoEsperado)
-});
+    expect(resultadoReal).toEqual(resultadoEsperado)
+  });
 })
 
-describe('ordenZaA', () => {
+describe('ordenAyZpel', () => {
   //it es cada caso de testeo
-  it('ordenar los personajes de la Z a la A',() => {
-    
-    let namPrueba = [
-      {nombrePeli: 'pel',
-      people: [
-    { name:'Satsuki Kusakabe' },
-    { name:'Dola' },
-    { name:'Yasuko Kusakabe' },
-    { name:'Chu Totoro' },
-  ]}
-]   
-    let orden = [
-      {nombrePeli: 'pel1',
-      people: [
-    { name:'Yasuko Kusakabe' },
-    { name:'Satsuki Kusakabe' },
-    { name:'Dola' },
-    { name:'Chu Totoro'},
-  ]}
-]
-    let resultadoEsperado = [
-      { name:'Yasuko Kusakabe' },
-      { name:'Satsuki Kusakabe' },
-      { name:'Dola' },
-      { name:'Chu Totoro'},
+  it('ordenar las peliculas de la A a la Z', () => {
+
+    let peliculas = [
+      { title: 'Only Yesterday' },
+      { title: 'My Neighbor Totoro' },
+      { title: 'Grave of the Fireflies' },
+      { title: 'Invasiones' },
     ]
-    let resultadoReal = ordenZaA(namPrueba,orden)
+
+    let orden = [
+      { title: 'Grave of the Fireflies' },
+      { title: 'Invasiones' },
+      { title: 'My Neighbor Totoro' },
+      { title: 'Only Yesterday' },
+    ]
+    let resultadoEsperado = [
+      { title: 'Grave of the Fireflies' },
+      { title: 'Invasiones' },
+      { title: 'My Neighbor Totoro' },
+      { title: 'Only Yesterday' },
+    ]
+    let resultadoReal = ordenAyZpel(peliculas, orden)
     //Yo espero que resultadoReal sea igual al resultadoEsperado
-     expect (resultadoReal).toEqual(resultadoEsperado)
-});
+    expect(resultadoReal).toEqual(resultadoEsperado)
+  });
 })
 
+describe('ordenZyApel', () => {
+  //it es cada caso de testeo
+  it('ordenar las peliculas de la Z a la A', () => {
+
+    let peliculas = [
+      { title: 'My Neighbor Totoro' },
+      { title: 'Invasiones' },
+      { title: 'Grave of the Fireflies' },
+      { title: 'Only Yesterday' },
+    ]
+
+    let orden = [
+      { title: 'Only Yesterday' },
+      { title: 'My Neighbor Totoro' },
+      { title: 'Invasiones' },
+      { title: 'Grave of the Fireflies' },
+
+    ]
+    let resultadoEsperado = [
+      { title: 'Only Yesterday' },
+      { title: 'My Neighbor Totoro' },
+      { title: 'Invasiones' },
+      { title: 'Grave of the Fireflies' },
+
+    ]
+    let resultadoReal = ordenZyApel(peliculas, orden)
+    //Yo espero que resultadoReal sea igual al resultadoEsperado
+    expect(resultadoReal).toEqual(resultadoEsperado)
+  });
+})
+
+describe('ordenPopularity', () => {
+  //it es cada caso de testeo
+  it('ordenar las peliculas por popularidad', () => {
+
+    let peliculas = [
+      { rt_score: '45' },
+      { rt_score: '95' },
+      { rt_score: '100' },
+      { rt_score: '72' },
+    ]
+
+    let orden = [
+      { rt_score: '100' },
+      { rt_score: '95' },
+      { rt_score: '72' },
+      { rt_score: '45' },
+    ]
+    let resultadoEsperado = [
+      { rt_score: '100' },
+      { rt_score: '95' },
+      { rt_score: '72' },
+      { rt_score: '45' },
+    ]
+    let resultadoReal = ordenPopularity(peliculas, orden)
+    //Yo espero que resultadoReal sea igual al resultadoEsperado
+    expect(resultadoReal).toEqual(resultadoEsperado)
+  });
+})
+
+describe('ordenPopularity', () => {
+  //it es cada caso de testeo
+  it('ordenar las peliculas por los mas recientes', () => {
+
+    let peliculas = [
+      { release_date: '1990' },
+      { release_date: '2015' },
+      { release_date: '2022' },
+      { release_date: '1986' },
+    ]
+
+    let orden = [
+      { release_date: '2022' },
+      { release_date: '2015' },
+      { release_date: '1990' },
+      { release_date: '1986' },
+    ]
+    let resultadoEsperado = [
+      { release_date: '2022' },
+      { release_date: '2015' },
+      { release_date: '1990' },
+      { release_date: '1986' },
+    ]
+    let resultadoReal = ordenYear(peliculas, orden)
+    //Yo espero que resultadoReal sea igual al resultadoEsperado
+    expect(resultadoReal).toEqual(resultadoEsperado)
+  });
+})
