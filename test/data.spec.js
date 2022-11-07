@@ -104,6 +104,8 @@ describe('ordenAyZ', () => {
           { name: 'Dola' },
           { name: 'Yasuko Kusakabe' },
           { name: 'Chu Totoro' },
+          { name: 'Chu Totoro' },
+          
         ]
       }
     ]
@@ -112,6 +114,7 @@ describe('ordenAyZ', () => {
         nombrePeli: 'pel1',
         people: [
           { name: 'Chu Totoro' },
+          { name: 'Chu Totoro' },
           { name: 'Dola' },
           { name: 'Satsuki Kusakabe' },
           { name: 'Yasuko Kusakabe' },
@@ -119,6 +122,7 @@ describe('ordenAyZ', () => {
       }
     ]
     let resultadoEsperado = [
+      { name: 'Chu Totoro' },
       { name: 'Chu Totoro' },
       { name: 'Dola' },
       { name: 'Satsuki Kusakabe' },
@@ -142,6 +146,7 @@ describe('ordenZaA', () => {
           { name: 'Dola' },
           { name: 'Yasuko Kusakabe' },
           { name: 'Chu Totoro' },
+          { name: 'Chu Totoro' },
         ]
       }
     ]
@@ -153,6 +158,7 @@ describe('ordenZaA', () => {
           { name: 'Satsuki Kusakabe' },
           { name: 'Dola' },
           { name: 'Chu Totoro' },
+          { name: 'Chu Totoro' },
         ]
       }
     ]
@@ -160,6 +166,7 @@ describe('ordenZaA', () => {
       { name: 'Yasuko Kusakabe' },
       { name: 'Satsuki Kusakabe' },
       { name: 'Dola' },
+      { name: 'Chu Totoro' },
       { name: 'Chu Totoro' },
     ]
     let resultadoReal = ordenZaA(namPrueba, orden)
@@ -257,7 +264,8 @@ describe('ordenPopularity', () => {
   });
 })
 
-describe('ordenPopularity', () => {
+describe('ordenYear', () => {
+
   //it es cada caso de testeo
   it('ordenar las peliculas por los mas recientes', () => {
 
@@ -266,6 +274,7 @@ describe('ordenPopularity', () => {
       { release_date: '2015' },
       { release_date: '2022' },
       { release_date: '1986' },
+      { release_date: '1986' },
     ]
 
     let orden = [
@@ -273,15 +282,19 @@ describe('ordenPopularity', () => {
       { release_date: '2015' },
       { release_date: '1990' },
       { release_date: '1986' },
+      { release_date: '1986' },
     ]
     let resultadoEsperado = [
       { release_date: '2022' },
       { release_date: '2015' },
       { release_date: '1990' },
       { release_date: '1986' },
+      { release_date: '1986' },
     ]
     let resultadoReal = ordenYear(peliculas, orden)
     //Yo espero que resultadoReal sea igual al resultadoEsperado
     expect(resultadoReal).toEqual(resultadoEsperado)
   });
+ 
 })
+

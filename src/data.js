@@ -63,7 +63,7 @@ export const ordenAyZ = (datadepelicula) => {
       if (a.name === b.name) {
         return 0
       }
-      return resultadouno
+      // return resultadouno
     })
     ordendepersonajes.push(resultadouno)
   });
@@ -83,7 +83,6 @@ export const ordenZaA = (datadepelicula) => {
       if (a.name === b.name) {
         return 0
       }
-      return resultado
     })
     ordendepersonajes.push(resultado)
 
@@ -101,10 +100,9 @@ export const ordenAyZpel = (datadepeliculas) => {
     if (a.title > b.title) {
       return 1
     }
-    if (a.title === b.title) {
-      return 0
-    }
-    return resultado1
+    // if (a.title === b.title) {
+    //   return 0
+    // }
   })
   resultado1.push()
 
@@ -119,10 +117,10 @@ export const ordenZyApel = (datadepeliculas) => {
     if (a.title > b.title) {
       return -1
     }
-    if (a.title === b.title) {
-      return 0
-    }
-    return resultado2
+    // if (a.title === b.title) {
+    //   return 0
+    // }
+    
   })
   resultado2.push()
 
@@ -150,7 +148,7 @@ export const ordenYear = (datadepeliculas) => {
     if (a.release_date === b.release_date) {
       return 0
     }
-    return resultado3
+    
   })
   resultado3.push()
 
