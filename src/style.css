@@ -1,5 +1,5 @@
 body {
-    background-color: #e9d3cc;
+    background-color: #fff2ef;
 
 }
 
@@ -24,7 +24,7 @@ nav.encabezado {
     padding: 0;
     width: 100%;
     float: left;
-    margin: 0%;
+    margin-bottom: 100px;
 
     /* min-height: fit-content; */
 }
@@ -210,7 +210,7 @@ nav {
 }
 
 .marco {
-    background-color: #9b7d74;
+    background-color: #FFAFB0;
     padding: 15px;
     width: 400px;
 }
@@ -218,7 +218,6 @@ nav {
 .padre div {
     display: inline-block;
     flex-wrap: wrap;
-    margin: 0;
     /* flex-direction:column; */
     justify-content: center;
     align-content: center;
@@ -226,7 +225,7 @@ nav {
     /* margin-top:auto; */
     float: inline-start;
     width: 710px;
-    background-color: #fff2ef;
+    background-color: #ffafb0;
 
 }
 
@@ -247,20 +246,22 @@ nav {
     width: 100%;
     height: 100%;
 }
-.bajarventana  {
+
+.bajarventana {
     padding-top: 100px;
 }
+
 .ventanas p {
-    text-align:center;
+    text-align: center;
     font-size: 30px;
-    justify-content:flex-end;
+    /* justify-content:flex-end; */
     font-family: 'Roboto Condensed', sans-serif;
 }
 
 .ventanas {
 
     padding: 0px;
-    justify-content: center;
+    /* justify-content: center; */
     width: 600px;
     height: 400px;
     margin: auto;
@@ -298,8 +299,8 @@ nav {
     display: flexbox;
     font-family: 'Roboto Condensed', sans-serif;
     border-radius: 10px;
-    background-color: black;
-    color: #f2f4f6;
+    background-color: #e9d3cc;
+    color: black;
     font-weight: 700;
     font-size: 20px;
 
@@ -320,9 +321,9 @@ button {
     padding: 10px 50px 50px 190px;
     list-style-type: none;
     transition: 0.5s;
-  
- 
-    
+
+
+
 }
 
 .enlaceventana a {
@@ -336,9 +337,10 @@ button {
     width: 100px;
     font-weight: 700;
     font-size: 20px;
-    
-    
+
+
 }
+
 .enlaceventana li :hover {
     background-color: transparent;
     Color: black
@@ -437,22 +439,25 @@ button {
         width: 550px;
 
     }
-    .ventanas p {
-        text-align:center;
-        font-size: 28px;
-        justify-content:center;
-        
-      
-}
-.ventanas img {
-    width: 100%;
-    height: 90%;
-    padding-top: 20px;
-  
-}
-.enlaceventana li {
-    padding: 2px 50px 50px 100px;
-   
 
-}
+    .ventanas p {
+        text-align: center;
+        font-size: 28px;
+        justify-content: center;
+
+
+    }
+
+    .ventanas img {
+        width: 100%;
+        height: 90%;
+        padding-top: 20px;
+
+    }
+
+    .enlaceventana li {
+        padding: 2px 50px 50px 100px;
+
+
+    }
 }

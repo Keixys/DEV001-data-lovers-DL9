@@ -63,7 +63,7 @@ function cartaPeliculas(todoslosdatos) {
       const imagen = document.createElement("img")
       imagen.src = film.poster;
       const yearlanzamiento = document.createElement("p")
-      yearlanzamiento.textContent = film.release_date
+      yearlanzamiento.textContent = 'year:' + film.release_date
       const directorpeli = document.createElement("p")
       directorpeli.textContent = film.director;
       const score= document.createElement("p")
@@ -91,6 +91,7 @@ todosLosDatos.forEach(film => {
    const imagen = document.createElement("img")
    imagen.src = film.poster;
    const yearlanzamiento = document.createElement("p")
+  
    yearlanzamiento.textContent = film.release_date
    const directorpeli = document.createElement("p")
    directorpeli.textContent = film.director;
@@ -100,6 +101,7 @@ todosLosDatos.forEach(film => {
    const pelicula = document.createElement("div")
    pelicula.appendChild(imagen)
    pelicula.appendChild(titulo)
+
    pelicula.appendChild(yearlanzamiento)
    pelicula.appendChild(directorpeli)
    pelicula.appendChild(score)
