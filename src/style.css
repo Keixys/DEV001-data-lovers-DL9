@@ -11,17 +11,24 @@ body {
     padding: 0;
 
 }
-nav.encabezado{
+
+nav.encabezado {
     width: auto;
     height: 70px;
 }
+
 .encabezado2 {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 50px;
     color: black;
     padding: 0;
-    min-height: fit-content;
+    width: 100%;
+    float: left;
+    margin: 0%;
+
+    /* min-height: fit-content; */
 }
+
 .slider {
     width: 100%;
     margin: auto;
@@ -46,12 +53,17 @@ nav.encabezado{
     width: 100%;
     list-style: none;
     /*se le quita los puntos de lista */
+}
 
+div.slider {
+    width: 100%;
+    height: 90%;
 }
 
 .slider img {
     width: 100%;
-   
+    height: 90%;
+
 
 
 }
@@ -106,7 +118,7 @@ nav.encabezado{
 
 .enlace {
     display: flex;
-    text-align:right;
+    text-align: right;
 }
 
 nav {
@@ -117,7 +129,6 @@ nav {
     background-color: #e9d3cc;
     padding: 0;
 }
-
 
 
 .enlace li {
@@ -197,45 +208,72 @@ nav {
     margin: auto;
 
 }
+
 .marco {
     background-color: #9b7d74;
     padding: 15px;
     width: 400px;
 }
 
-div.ventanas {
-    margin: 20px 20px;
-    float: inline-start;
-    width: 600px;
- 
-}
-.ventanas p{
-    text-align:center;
-    font-size: 30px;
-    justify-content: center;
-    padding: 1;
-}
-
-
-.ventanas {
+.padre div {
     display: inline-block;
     flex-wrap: wrap;
-    flex-direction: column;
+    margin: 0;
+    /* flex-direction:column; */
+    justify-content: center;
+    align-content: center;
+    /* position: static; */
+    /* margin-top:auto; */
+    float: inline-start;
+    width: 710px;
+    background-color: #fff2ef;
+
+}
+
+.padre1 div {
+    display: inline-block;
+    flex-wrap: wrap;
+    /* flex-direction:column; */
+    justify-content: center;
+    align-content: center;
+    /* position: static; */
+    /* margin-top:auto; */
+    float: inline-start;
+    width: 710px;
+    background-color: #ffafb0;
+}
+
+.ventanas img {
+    width: 100%;
+    height: 100%;
+}
+.bajarventana  {
+    padding-top: 100px;
+}
+.ventanas p {
+    text-align:center;
+    font-size: 30px;
+    justify-content:flex-end;
     font-family: 'Roboto Condensed', sans-serif;
-    color: #0a223a;
-    padding: 30px;
-    font-weight: 500px;
-    width: 500px;
-    height: 500px;
-    border: 5px solid;
+}
+
+.ventanas {
+
+    padding: 0px;
+    justify-content: center;
+    width: 600px;
+    height: 400px;
+    margin: auto;
+
+
 }
 
 
-div.ventanas img {
+/* div.ventanas img {
     padding: 0%;
     width: 100%;
     height: 80%;
-}
+} */
 
 
 .ham {
@@ -278,11 +316,66 @@ button {
 
 }
 
+.enlaceventana li {
+    padding: 10px 50px 50px 190px;
+    list-style-type: none;
+    transition: 0.5s;
+  
+ 
+    
+}
+
+.enlaceventana a {
+    margin-left: 50px;
+    list-style: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 10px 5px;
+    background-color: black;
+    color: #e9d3cc;
+    text-decoration: none;
+    width: 100px;
+    font-weight: 700;
+    font-size: 20px;
+    
+    
+}
+.enlaceventana li :hover {
+    background-color: transparent;
+    Color: black
+}
+
+
 @media (max-width: 800px) {
 
 
     .encabezado {
-        padding-left: 3px;
+        padding: 0;
+
+    }
+
+    /* nav.encabezado{
+        width: auto;
+        flex-direction:row;
+        display: flex; */
+
+    /* } */
+    .slider {
+        margin-top: 20px;
+
+
+        /* para que las otras imagenes no se vean*/
+    }
+
+    #titulo {
+        display: contents;
+    }
+
+    nav {
+        display: contents;
+        align-items: flex-start;
+        padding: 0;
+        margin-top: 0;
+        ;
     }
 
     .ham {
@@ -290,19 +383,15 @@ button {
         position: absolute;
         top: 15px;
         right: 25px;
+        /* margin-top: 0; */
     }
 
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-        padding-top: 25px 0;
-    }
 
     .enlace {
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        height: 92vh;
+        height: 40px;
         margin: 0;
         padding: 0;
         width: 100%;
@@ -313,12 +402,12 @@ button {
     .enlace li {
         width: 100%;
         text-align: center;
-        padding: 20px;
+        padding: 0;
     }
 
-        .marco {
-            flex-direction: column;
-        }
+    .marco {
+        flex-direction: column;
+    }
 
     .enlace.activado {
         display: flex;
@@ -335,4 +424,35 @@ button {
     .linea3.animado {
         transform: rotate(45deg)translate(-10px, -8px);
     }
+
+    .encabezado2 {
+        font-size: 30px;
+    }
+
+    .padre div {
+        width: 550px;
+    }
+
+    .padre1 div {
+        width: 550px;
+
+    }
+    .ventanas p {
+        text-align:center;
+        font-size: 28px;
+        justify-content:center;
+        
+      
+}
+.ventanas img {
+    width: 100%;
+    height: 90%;
+    padding-top: 20px;
+  
+}
+.enlaceventana li {
+    padding: 2px 50px 50px 100px;
+   
+
+}
 }
