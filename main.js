@@ -3,24 +3,18 @@ import data from './data/ghibli/ghibli.js';
 // for(let i = 0; i<data.films.length; i++){
 // console.log(data.films[i].title)
 // }
+const ham = document.querySelector(".ham");
+const enlaces = document.querySelector(".enlace");
+// se usa el all porque estamos diciendo que coja todas las barras
+const barras= document.querySelectorAll(".ham span");
 
-console.log(data.films);
 
-const datos = data
-const contenido = document.querySelector("#lista")
-const fragment = document.createDocumentFragment()
+ham.addEventListener("click", () =>{
+    enlaces.classList.toggle("activado");
+    barras.forEach(child=>{child.classList.toggle(`animado`)});
+  // para cada elemento de la variable barras que incluye los 3 elementos span le agregamos la clase animado 
+})//toggle se usa para alternar, que va a cambiar al displey none a display flex
 
-data.films.forEach(film => {
-    const titulo = document.createElement("p")
-    titulo.textContent=film.title;
-    const imagen = document.createElement("img")
-    imagen.src = film.poster;
+console.log(data)
 
-    const pelicula = document.createElement("div")
-    pelicula.appendChild(titulo)
-    pelicula.appendChild(imagen)
 
-    fragment.appendChild(pelicula)
-})
-
-contenido.appendChild(fragment)

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<header>
+
+  <nav class="encabezado">
+    <h1 id="titulo"> WORLD GHIBLI</h1>
+
+    <ul class="enlace">
+      <li><a type="button" id="verinicio" href="./index.html">HOME</a></li>
+    </ul>
+
+    <button class="ham" type=" button">
+      <span class="linea1"></span>
+      <span class="linea2"></span>
+      <span class="linea3"></span>
+    </button>
+
+  </nav>
+</header>
+
+<body class="fondo">
+
+  <div class="titulos">
+    <h2>MOVIES</h2>
+
+    <select class="filtro" id="filtro">
+      <option disabled selected="">Select a director</option>
+      <option>Hayao Miyazaki</option>
+      <option>Isao Takahata</option>
+      <option>Yoshifumi Kondō</option>
+      <option>Hiroyuki Morita</option>
+      <option>Gorō Miyazaki</option>
+      <option>Hiromasa Yonebayashi</option>
+      <option id="reset">ver todas las peliculas</option>
+    </select>
+
+    <select class="filtro" id="ordenarPel">
+      <option disabled selected="">Order</option>
+      <option>A to Z</option>
+      <option>Z to A</option>
+      <option>Popularity</option>
+      <option>Release date</option>
+    </select>
+
+    <button class="filtro" onClick="window.location.reload();">RESET</button>
+
+    <div class="contenido" id="lista">
+    </div>
+  </div>
+
+  <script src="mainpeliculas.js" type="module"></script>
+</body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css" />
+
+</html>

@@ -1,46 +1,239 @@
 body {
-    background-color: #dbd2cf;
+    background-color: #e9d3cc;
+
 }
 
-#titulo {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 70px;
-    color: #2d5b88;
+body.fondo {
+    background-color: #fff2ef;
+    margin: 0;
+}
+
+.encabezado {
+    font-family: 'Roboto Condensed', sans-serif;
+    justify-content: space-between;
+    font-size: 50px;
+    color: black;
+    padding: 0;
+    margin: 0;
+
+}
+
+.titulos h2 {
+    margin-bottom: 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 8vh;
+    background-color: #e9d3cc;
+    padding: 0;
+    /* margin: auto; */
+}
+
+nav.encabezado {
+    width: auto;
+    height: 85px;
+    margin-top: 0;
+
+
+}
+
+div.encabezado2 {
+    width: 100%;
+    height: 100%;
+    justify-content: left;
+
+}
+
+.encabezado2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 50px;
+    color: black;
+    padding: 0;
+    width: 100%;
+    float: left;
+    margin: 0;
+    align-content: space-around;
+
+
+    /* min-height: fit-content; */
+}
+
+
+.slider {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    margin: 0;
+    /* para que las otras imagenes no se vean*/
+}
+
+.slider ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+
+    /* porque son 4 imagenes*/
+
+    animation: cambiar 20s infinite alternate;
+
+    /* se pone alternate para que cuando llegue a la ultima imgaen retroceda 
+    y no cambie bruscamente */
+    animation-timing-function: ease-in;
+}
+
+.slider li {
+    width: 100%;
+    list-style: none;
+    margin: 0px 0px 0px 0px;
+
+
+    /*se le quita los puntos de lista */
+}
+
+div.slider {
+    width: 100%;
+    height: 90%;
+    margin: 0px 0px 0px 0px;
+}
+
+.slider img {
+    width: 100%;
+    height: 80%;
+    margin-bottom: 0px;
+
+
+
+}
+
+/* las paradas */
+@keyframes cambiar {
+
+    /* para que la priemra imagen no se mueva, osea que del 0 al 20% este la primera imagen 
+    un 20% de 20 segundos, osea 4 segundos*/
+    0% {
+        margin-left: 0;
+    }
+
+    20% {
+        margin-left: 0;
+    }
+
+    /* 5% será la tarnsicion osea 5% de 20 segundos  */
+    /* porque cada imagen ocupa el 100%, */
+    25% {
+        margin-left: -100%;
+    }
+
+    45% {
+        margin-left: -100%;
+    }
+
+    /* se pone -200% para que se vea la tercera imagen  */
+    50% {
+        margin-left: -200%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -300%;
+    }
+
+    100% {
+        margin-left: -300%;
+    }
 }
 
 #bienvenida {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 45px;
     text-align: center;
     color: #0a223a;
 }
 
-#enlace {
-    text-align: center;
-    color: #0a223a;
+.enlace {
+    display: flex;
+    text-align: justify
 }
 
-#introduccion {
-    padding: 130px;
-    border: 1px solid;
-    background-image: url(imagen.jpg);
+
+.enlace li {
+    padding: 0;
+    list-style-type: none;
+    transition: 0.5s;
+
+
 }
 
-#verPeliculas {
-    font-family: Arial, Helvetica, sans-serif;
+.enlace li a {
+    margin-left: 50px;
+    list-style-type: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 10px 5px;
+    background-color: #c2a199;
+    color: black;
+    text-decoration: none;
+    width: 100px;
+    font-weight: 700;
     font-size: 20px;
-    align-content: center;
 
 }
 
-#peliculas {
-    font-family: Arial, Helvetica, sans-serif;
+.enlace li :hover {
+    background-color: #fff2ef;
+    Color: black
+}
+
+#enlacepersonaje {
+    background-color: #fff2ef;
+    color: black;
+}
+
+ul.enlace {
+    margin: 2px 20px 2px 2px;
+}
+
+a#verinicio {
+    margin: 25px;
+    justify-content: center;
+
+}
+
+
+
+/* #introduccion {
+    padding: 130px;
+    background-image: url(imagen.jpg); */
+
+
+/* } */
+
+/* #verPeliculas {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    align-content: center; */
+
+/* } */
+
+.titulos {
+    flex: block;
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 45px;
     text-align: center;
-    color: #2d5b88;
+    color: black;
+    margin: 0;
 }
 
-#lista {
+/* h2 {
+    color: black */
+/* } */
+
+.contenido {
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -50,14 +243,332 @@ body {
     width: calc(90% + var(--gap));
 }
 
-#lista>div {
+.contenido .marco {
     /* margin: var(--gap) 0 0 var(--gap); */
     width: 300px;
-    height: 400px;
-   
+    height: 550px;
+
 }
 
-#lista>div img{
-    width: 80%;
+.contenido img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+
+}
+
+.contenido .marco div p {
+    margin: 2px 0px 0px 30px;
+    text-align: left
+}
+
+.marco {
+    max-width: 500px;
+    background-color: #FFAFB0;
+    padding: 10px;
+    margin: 5px;
+
+}
+
+/* .padre {
+    border: solid black;
+    margin-top: 300px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+} */
+/* .padre div p{
+    font-size: 50px;
+} */
+/* div.ventanas {
+    margin: 0px 0px 0px 15px
+} */
+div .ventanas {
+    /* display: inline-block; */
+    flex-wrap: wrap;
+    margin: 0;
+    flex-direction: row;
+    padding: 0;
+    align-content: flex-start;
+    /* position:relative; */
+    /* margin-top:0%; */
+    /* float:inline-start; */
+    width: 700px;
+}
+
+/* .padre div { */
+/* position: relative;
+    left: 7%;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: solid red; */
+
+/* } */
+
+
+/* display: inline-block;
+    flex-wrap: wrap;
+    flex-direction:row; 
+    justify-content: center;
+    align-content: center;
+    /* position: static; */
+/* margin-top:auto; */
+/* float: inline-start;
+    width: 700px;
+    background-color: #fff2ef;
+    border: solid black;  */
+
+
+/* .padre1 div {
+    display: inline-block;
+    flex-wrap: wrap;
+    /* flex-direction:column; */
+/* justify-content: center;
+    align-content: center; */
+/* position: static; */
+/* margin-top:auto; */
+/* float: inline-start;
+    width: 710px;
+    background-color: #ffafb0;
+} */
+
+.ventanas img {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0;
+    position: relative;
+
+
+}
+
+.bajarventana {
+    padding-top: 90px;
+}
+
+.ventanas p {
+    text-align: center;
+    font-size: 25px;
+    /* justify-content:flex-end; */
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.ventanas {
+    display: inline-block;
+    /* flex-wrap: wrap;
+     flex-direction:column;  */
+    /* font-family: 'Roboto Condensed', sans-serif;
+        color: #0a223a; */
+    padding: 95px;
+    /* font-weight: 500px; */
+    width: 700px;
+    height: 500px;
+    margin: 0;
+    float: left;
+    justify-content: space-around;
+}
+
+#Vpeli {
+    background: #fff2ef;
+}
+
+#Vperso {
+    background: #FFAFB0;
+}
+
+/* div.ventanas img {
+    padding: 0%;
+    width: 100%;
     height: 80%;
+} */
+
+
+.ham {
+    display: none;
+    cursor: pointer;
+    border: none;
+    margin: 0%;
+    padding: 0;
+    background-color: transparent;
+}
+
+.ham span {
+    display: block;
+    background-color: black;
+    height: 3px;
+    width: 28px;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.filtro {
+    display: inline-flex;
+    font-family: 'Roboto Condensed', sans-serif;
+    /* border-radius: 10px; */
+    background-color: #e9d3cc;
+    color: black;
+    /* font-weight: 700; */
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+button {
+    display: block;
+    font-family: 'Roboto Condensed', sans-serif;
+    /* border-radius: 10px; */
+    background-color: #c2a199;
+    color: black;
+    font-weight: 900;
+    font-size: 20px;
+
+}
+
+.enlaceventana li {
+    padding: 10px 50px 50px 190px;
+    list-style-type: none;
+    transition: 0.5s;
+
+
+
+}
+
+.enlaceventana a {
+    margin-left: 50 px;
+    list-style: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 10px 5px;
+    background-color: #c2a199;
+    color: black;
+    text-decoration: none;
+    width: 100px;
+    font-weight: 700;
+    font-size: 20px;
+
+
+}
+
+.enlaceventana li :hover {
+    background-color: #c2a199;
+    Color: black
+}
+
+
+@media (max-width: 800px) {
+
+
+    .encabezado {
+        padding: 0;
+
+    }
+
+    /* nav.encabezado{
+        width: auto;
+        flex-direction:row;
+        display: flex; */
+
+    /* } */
+    .slider {
+        margin-top: 20px;
+
+
+        /* para que las otras imagenes no se vean*/
+    }
+
+    #titulo {
+        display: contents;
+    }
+
+    nav {
+        display: contents;
+        align-items: flex-start;
+        padding: 0;
+        margin-top: 0;
+        ;
+    }
+
+    .ham {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 25px;
+        /* margin-top: 0; */
+    }
+
+
+    .enlace {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 40px;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: none;
+
+    }
+
+    .enlace li {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    .marco {
+        flex-direction: column;
+    }
+
+    .enlace.activado {
+        display: flex;
+    }
+
+    .linea1.animado {
+        transform: rotate(-45deg) translate(-10px, 8px);
+    }
+
+    .linea2.animado {
+        opacity: 0;
+    }
+
+    .linea3.animado {
+        transform: rotate(45deg)translate(-10px, -8px);
+    }
+
+    .encabezado2 {
+        font-size: 20px;
+    }
+
+
+
+    .ventanas p {
+        text-align: center;
+        font-size: 28px;
+        justify-content: center;
+
+
+    }
+
+    .ventanas img {
+        width: 100%;
+        height: 100%;
+        padding-top: 0;
+
+    }
+
+    .enlaceventana li {
+        padding: 2px 50px 50px 100px;
+
+
+    }
+
+    /* div.ventanas {
+
+       align-content: center;
+        width: 300%;
+        height: 300%;
+        padding:50px; */
+    
+    /* } */
 }
