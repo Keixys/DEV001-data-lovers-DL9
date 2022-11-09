@@ -37,12 +37,14 @@ nav.encabezado {
     height: 85px;
     margin-top: 0;
 
+
 }
 
 div.encabezado2 {
-    width: auto;
-    height: 85px;
-    margin-top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: left;
+
 }
 
 .encabezado2 {
@@ -52,10 +54,13 @@ div.encabezado2 {
     padding: 0;
     width: 100%;
     float: left;
-    margin: 100px;
+    margin: 0;
+    align-content: space-around;
+
 
     /* min-height: fit-content; */
 }
+
 
 .slider {
     width: 100%;
@@ -96,7 +101,7 @@ div.slider {
 
 .slider img {
     width: 100%;
-    height: 75%;
+    height: 80%;
     margin-bottom: 0px;
 
 
@@ -200,6 +205,7 @@ a#verinicio {
 }
 
 
+
 /* #introduccion {
     padding: 130px;
     background-image: url(imagen.jpg); */
@@ -262,7 +268,7 @@ a#verinicio {
 
 }
 
-    /* .padre {
+/* .padre {
     border: solid black;
     margin-top: 300px;
     margin: 0;
@@ -273,41 +279,42 @@ a#verinicio {
 /* .padre div p{
     font-size: 50px;
 } */
-div.ventanas {
-    margin: 20px 20px;
-}
-.padre div {
-    display: inline-block;
+/* div.ventanas {
+    margin: 0px 0px 0px 15px
+} */
+div .ventanas {
+    /* display: inline-block; */
     flex-wrap: wrap;
     margin: 0;
-    /* flex-direction:column; */
-    justify-content: center;
-    align-content: center;
-    /* position: static; */
-    /* margin-top:auto; */
-    float: inline-start;
-    width: 600px;
+    flex-direction: row;
+    padding: 0;
+    align-content: flex-start;
+    /* position:relative; */
+    /* margin-top:0%; */
+    /* float:inline-start; */
+    width: 700px;
 }
+
 /* .padre div { */
-    /* position: relative;
+/* position: relative;
     left: 7%;
     margin-top: 3%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     border: solid red; */
-  
+
 /* } */
 
 
-    /* display: inline-block;
+/* display: inline-block;
     flex-wrap: wrap;
     flex-direction:row; 
     justify-content: center;
     align-content: center;
     /* position: static; */
-    /* margin-top:auto; */
-    /* float: inline-start;
+/* margin-top:auto; */
+/* float: inline-start;
     width: 700px;
     background-color: #fff2ef;
     border: solid black;  */
@@ -329,32 +336,46 @@ div.ventanas {
 .ventanas img {
     width: 100%;
     height: 100%;
+    margin: 0px;
+    padding: 0;
+    position: relative;
+
+
 }
 
 .bajarventana {
-    padding-top: 100px;
+    padding-top: 90px;
 }
 
 .ventanas p {
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     /* justify-content:flex-end; */
     font-family: 'Roboto Condensed', sans-serif;
 }
 
 .ventanas {
     display: inline-block;
-     flex-wrap: wrap;
-     flex-direction: column;
-     font-family: 'Roboto Condensed', sans-serif;
-     color: #0a223a;
-     padding: 30px;
-     font-weight: 500px;
-     width: 500px;
-     height: 500px;
-     border: 5px solid;
+    /* flex-wrap: wrap;
+     flex-direction:column;  */
+    /* font-family: 'Roboto Condensed', sans-serif;
+        color: #0a223a; */
+    padding: 95px;
+    /* font-weight: 500px; */
+    width: 700px;
+    height: 500px;
+    margin: 0;
+    float: left;
+    justify-content: space-around;
 }
 
+#Vpeli {
+    background: #fff2ef;
+}
+
+#Vperso {
+    background: #FFAFB0;
+}
 
 /* div.ventanas img {
     padding: 0%;
@@ -413,7 +434,7 @@ button {
 }
 
 .enlaceventana a {
-    margin-left: 50px;
+    margin-left: 50 px;
     list-style: none;
     font-family: 'Roboto Condensed', sans-serif;
     padding: 10px 5px;
@@ -514,17 +535,10 @@ button {
     }
 
     .encabezado2 {
-        font-size: 30px;
+        font-size: 20px;
     }
 
-    .padre div {
-        width: 550px;
-    }
 
-    .padre1 div {
-        width: 550px;
-
-    }
 
     .ventanas p {
         text-align: center;
@@ -536,8 +550,8 @@ button {
 
     .ventanas img {
         width: 100%;
-        height: 90%;
-        padding-top: 20px;
+        height: 100%;
+        padding-top: 0;
 
     }
 
@@ -546,4 +560,13 @@ button {
 
 
     }
+
+    /* div.ventanas {
+
+       align-content: center;
+        width: 300%;
+        height: 300%;
+        padding:50px; */
+    
+    /* } */
 }
