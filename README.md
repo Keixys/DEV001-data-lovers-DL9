@@ -2,7 +2,7 @@
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
+* [1. Preámbulo](#1-Introduccion)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
 * [3. Objetivos de aprendizaje generales](#3-objetivos-de-aprendizaje-generales)
 * [4. Consideraciones generales](#4-consideraciones-generales)
@@ -15,7 +15,7 @@
 
 ***
 
-## 1. Preámbulo
+## 1. Introduccion
 
 Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
 el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
