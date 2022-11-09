@@ -54,13 +54,13 @@ ordenarPerReverse.addEventListener("change", (event) => {
 function carta(todoslospersonajes) {
     todoslospersonajes.forEach(personaje => {
         const titulo = document.createElement("p")
-        titulo.textContent = personaje.name
+        titulo.textContent = 'Name: ' +personaje.name
         const imagen = document.createElement("img")
         imagen.src = personaje.img;
         const genero = document.createElement("p")
-        genero.textContent = personaje.gender;
+        genero.textContent = 'Gender: ' +  personaje.gender;
         const especie = document.createElement("p")
-        especie.textContent = personaje.specie;
+        especie.textContent = 'Specie: ' + personaje.specie;
 
         const persona = document.createElement("div")
         persona.appendChild(imagen)
@@ -83,15 +83,15 @@ function cartaFilms(todoslospersonajes) {
         const personajes = film.people
         personajes.forEach(personaje => {
             const titulo = document.createElement("p")
-            titulo.textContent = personaje.name
+            titulo.textContent = 'Name: ' + personaje.name
             console.log(personaje)
             console.log(personaje.name);
             const imagen = document.createElement("img")
             imagen.src = personaje.img;
             const genero = document.createElement("p")
-            genero.textContent = personaje.gender;
+            genero.textContent = 'Gender: ' + personaje.gender;
             const especie = document.createElement("p")
-            especie.textContent = personaje.specie;
+            especie.textContent = 'Specie: ' + personaje.specie;
 
             const persona = document.createElement("div")
             persona.appendChild(imagen)
@@ -111,13 +111,13 @@ function cartaFilms(todoslospersonajes) {
 todaslaspeliculas.forEach(film => {
     film.people.forEach(personaje => {
         const titulo = document.createElement("p")
-        titulo.textContent = personaje.name;
+        titulo.textContent = "Name: " + personaje.name;
         const imagen = document.createElement("img")
         imagen.src = personaje.img;
         const genero = document.createElement("p")
-        genero.textContent = personaje.gender;
+        genero.textContent = 'Gender: ' +  personaje.gender;
         const especie = document.createElement("p")
-        especie.textContent = personaje.specie;
+        especie.textContent = 'Specie: ' + personaje.specie;
 
         const persona = document.createElement("div")
         persona.appendChild(imagen)

@@ -1,5 +1,5 @@
 import data from './data/ghibli/ghibli.js';
-import { filtrodedirector , ordenAyZpel, ordenZyApel, ordenPopularity, ordenYear} from './data.js';
+import { filtrodedirector, ordenAyZpel, ordenZyApel, ordenPopularity, ordenYear } from './data.js';
 
 const contenido = document.querySelector("#lista")
 const fragment = document.createDocumentFragment()
@@ -20,38 +20,38 @@ filtro.addEventListener("change", (event) => {
 const ordenarPel = document.querySelector("#ordenarPel")
 ordenarPel.addEventListener("change", (event) => {
    if (event.target.value === "A to Z") {
-    const oPel= ordenAyZpel(peliculasDatos, event.target.value);
-    contenido.innerHTML=""
-    cartaPeliculas(oPel)
+      const oPel = ordenAyZpel(peliculasDatos, event.target.value);
+      contenido.innerHTML = ""
+      cartaPeliculas(oPel)
    }
 })
 
 const ordenarPelRevers = document.querySelector("#ordenarPel")
 ordenarPelRevers.addEventListener("change", (event) => {
    if (event.target.value === "Z to A") {
-    const oPel= ordenZyApel(peliculasDatos, event.target.value);
-    contenido.innerHTML=""
-    cartaPeliculas(oPel)
+      const oPel = ordenZyApel(peliculasDatos, event.target.value);
+      contenido.innerHTML = ""
+      cartaPeliculas(oPel)
    }
 })
 
 const ordenarPopu = document.querySelector("#ordenarPel")
 ordenarPopu.addEventListener("change", (event) => {
    if (event.target.value === "Popularity") {
-    const oPopu= ordenPopularity (peliculasDatos, event.target.value);
-    contenido.innerHTML=""
-    cartaPeliculas(oPopu)
-   //  console.log (oYear)
+      const oPopu = ordenPopularity(peliculasDatos, event.target.value);
+      contenido.innerHTML = ""
+      cartaPeliculas(oPopu)
+      //  console.log (oYear)
    }
 })
 
 const ordenarYear = document.querySelector("#ordenarPel")
 ordenarYear.addEventListener("change", (event) => {
    if (event.target.value === "Release date") {
-    const oYear= ordenYear(peliculasDatos, event.target.value);
-    contenido.innerHTML=""
-    cartaPeliculas(oYear)
-    console.log (oYear)
+      const oYear = ordenYear(peliculasDatos, event.target.value);
+      contenido.innerHTML = ""
+      cartaPeliculas(oYear)
+      console.log(oYear)
    }
 })
 
@@ -59,15 +59,15 @@ ordenarYear.addEventListener("change", (event) => {
 function cartaPeliculas(todoslosdatos) {
    todoslosdatos.forEach(film => {
       const titulo = document.createElement("p")
-      titulo.textContent = film.title;
+      titulo.textContent = 'Title:' + film.title;
       const imagen = document.createElement("img")
       imagen.src = film.poster;
       const yearlanzamiento = document.createElement("p")
-      yearlanzamiento.textContent = 'year:' + film.release_date
+      yearlanzamiento.textContent = 'Year:' + film.release_date
       const directorpeli = document.createElement("p")
-      directorpeli.textContent = film.director;
-      const score= document.createElement("p")
-      score.textContent = film.rt_score;
+      directorpeli.textContent = 'Director:' + film.director;
+      const score = document.createElement("p")
+      score.textContent = 'Score:' + film.rt_score;
 
       const pelicula = document.createElement("div")
       pelicula.appendChild(imagen)
@@ -87,21 +87,19 @@ function cartaPeliculas(todoslosdatos) {
 
 todosLosDatos.forEach(film => {
    const titulo = document.createElement("p")
-   titulo.textContent = film.title;
+   titulo.textContent = 'Title:' + film.title;
    const imagen = document.createElement("img")
    imagen.src = film.poster;
    const yearlanzamiento = document.createElement("p")
-  
-   yearlanzamiento.textContent = film.release_date
+   yearlanzamiento.textContent = 'Year:' + film.release_date
    const directorpeli = document.createElement("p")
-   directorpeli.textContent = film.director;
-   const score= document.createElement("Score:")
-      score.textContent = film.rt_score;
+   directorpeli.textContent = 'Director:' + film.director;
+   const score = document.createElement("p")
+   score.textContent = 'Score:' + film.rt_score;
 
    const pelicula = document.createElement("div")
    pelicula.appendChild(imagen)
    pelicula.appendChild(titulo)
-
    pelicula.appendChild(yearlanzamiento)
    pelicula.appendChild(directorpeli)
    pelicula.appendChild(score)
@@ -116,11 +114,11 @@ contenido.appendChild(fragment);
 const ham = document.querySelector(".ham");
 const enlaces = document.querySelector(".enlace");
 // se usa el all porque estamos diciendo que coja todas las barras
-const barras= document.querySelectorAll(".ham span");
-ham.addEventListener("click", () =>{
+const barras = document.querySelectorAll(".ham span");
+ham.addEventListener("click", () => {
    enlaces.classList.toggle("activado");
-   barras.forEach(child=>{child.classList.toggle(`animado`)});
- // para cada elemento de la variable barras que incluye los 3 elementos span le agregamos la clase animado 
+   barras.forEach(child => { child.classList.toggle(`animado`) });
+   // para cada elemento de la variable barras que incluye los 3 elementos span le agregamos la clase animado 
 })//toggle se usa para alternar, que va a cambiar al displey none a display flex
 
 
