@@ -33,7 +33,7 @@ Nuestros prototipos de alta fidelidad, fueron pensados para incentivar las image
 Nuestra primera historia de usuario estuvo pensada para un publico que solamente quiere indagar sobre las peliculas del Studio Ghibli.
 Por eso hicimos un prototipo de baja fidelidad que tuviera solamente lo que desea ver este usuario, en lo que concluimos que simplemente desea un titulo en la interfaz con todas las peliculas del Studio Ghibli en que el pueda hacer scroll.
 
-* Prototipo de baja fidelidad HU 1 
+##### Prototipo de baja fidelidad HU 1 
 [![DATA-LOVE.jpg](https://i.postimg.cc/1XNPd9L9/DATA-LOVE.jpg)](https://postimg.cc/XB3TG0jh)
 
 ***
