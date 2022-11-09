@@ -1,4 +1,4 @@
-# Data Lovers
+# Data Lovers DL9
 
 ## Contenido
 
@@ -15,17 +15,18 @@
 WORD GHIBLI es una pagina web que ayuda a conocer, entender e indagar sobre el STUDIO GHIBLI.
 Cuenta con varias paginas de interaccion en los que podras filtrar, ordenar y leer tarjetas con informacion tanto de peliculas y personajes.
 
-** Prototipo de alta fidelidad HOME
+* Prototipo de alta fidelidad HOME
 [![1.jpg](https://i.postimg.cc/bJ85QqRG/1.jpg)](https://postimg.cc/Ty7QxMFG)
 
-** Prototipo de alta fidelidad MOVIES
+* Prototipo de alta fidelidad MOVIES
 [![4.jpg](https://i.postimg.cc/tT5Mk8rB/4.jpg)](https://postimg.cc/Kk1fvphT)
 
-** Prototipo de alta fidelidad CHARACTERS
+* Prototipo de alta fidelidad CHARACTERS
 [![5.jpg](https://i.postimg.cc/L580bvw2/5.jpg)](https://postimg.cc/2bgwqdCK)
 
 Nuestros prototipos de alta fidelidad, fueron pensados para incentivar las imagenes ya que el Studio Ghibli es muy reconocido por sus animaciones.
-
+  
+***
 
 ## Historia de Usuario 1
 
