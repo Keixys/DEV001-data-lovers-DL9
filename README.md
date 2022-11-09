@@ -15,13 +15,13 @@
 WORD GHIBLI es una pagina web que ayuda a conocer, entender e indagar sobre el STUDIO GHIBLI.
 Cuenta con varias paginas de interaccion en los que podras filtrar, ordenar y leer tarjetas con informacion tanto de peliculas y personajes.
 
-* Prototipo de alta fidelidad HOME
+##### Prototipo de alta fidelidad HOME
 [![1.jpg](https://i.postimg.cc/bJ85QqRG/1.jpg)](https://postimg.cc/Ty7QxMFG)
 
-* Prototipo de alta fidelidad MOVIES
+##### Prototipo de alta fidelidad MOVIES
 [![4.jpg](https://i.postimg.cc/tT5Mk8rB/4.jpg)](https://postimg.cc/Kk1fvphT)
 
-* Prototipo de alta fidelidad CHARACTERS
+#####  Prototipo de alta fidelidad CHARACTERS
 [![5.jpg](https://i.postimg.cc/L580bvw2/5.jpg)](https://postimg.cc/2bgwqdCK)
 
 Nuestros prototipos de alta fidelidad, fueron pensados para incentivar las imagenes ya que el Studio Ghibli es muy reconocido por sus animaciones.
@@ -47,10 +47,10 @@ Nuestra segunda historia de usuario estuvo pensada para un publico que ya ha vis
 * Orden por su emision 
 
 
-* Prototipo de baja fidelidad HU 2 HOME
+##### Prototipo de baja fidelidad HU 2 HOME
 [![DATA-LOVE-2.jpg](https://i.postimg.cc/15XP2K1W/DATA-LOVE-2.jpg)](https://postimg.cc/t7KLVWTP)
 
-* Protoripo de baja fidelidad HU 2 MOVIES
+#####  Protoripo de baja fidelidad HU 2 MOVIES
 [![DATA-LOVE.png](https://i.postimg.cc/Y099XKxR/DATA-LOVE.png)](https://postimg.cc/47Dsd0qH)
 
 ***
@@ -68,10 +68,10 @@ Y ordenar:
 * ordenar de la A a la Z
 * ordenar de la Z a la A
 
-* Prototipo de baja fidelidad HU 3 HOME
+##### Prototipo de baja fidelidad HU 3 HOME
 [![DATA-LOVE-4.jpg](https://i.postimg.cc/wxLs3JfT/DATA-LOVE-4.jpg)](https://postimg.cc/K4cYHKhd)
 
-* Prototipo de baja fidelidad HU 3 CHARACTERS
+##### Prototipo de baja fidelidad HU 3 CHARACTERS
 [![DATA-LOVE-3.jpg](https://i.postimg.cc/mgTnKL9T/DATA-LOVE-3.jpg)](https://postimg.cc/1fYMqZMd)
 
 
