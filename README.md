@@ -33,26 +33,27 @@ Nuestros prototipos de alta fidelidad, fueron pensados para incentivar las image
 Nuestra primera historia de usuario estuvo pensada para un publico que solamente quiere indagar sobre las peliculas del Studio Ghibli.
 Por eso hicimos un prototipo de baja fidelidad que tuviera solamente lo que desea ver este usuario, en lo que concluimos que simplemente desea un titulo en la interfaz con todas las peliculas del Studio Ghibli en que el pueda hacer scroll.
 
-*Prototipo de baja fidelidad HU 1 
+* Prototipo de baja fidelidad HU 1 
 [![DATA-LOVE.jpg](https://i.postimg.cc/1XNPd9L9/DATA-LOVE.jpg)](https://postimg.cc/XB3TG0jh)
 
+***
 
 ## Historia de Usuario 2
 
 Nuestra segunda historia de usuario estuvo pensada para un publico que ya ha visto varias peliculas ademas de que puede interactuar filtrando y ordenando asi que colocamos un filtro por director y el orden por 4 opciones:
-*ordenar de la A a la Z
-*ordenar de la Z a la A
-*orden por puntuacion 
-*Orden por su emision 
+* ordenar de la A a la Z
+* ordenar de la Z a la A
+* orden por puntuacion 
+* Orden por su emision 
 
 
-** Prototipo de baja fidelidad HU 2 HOME
+* Prototipo de baja fidelidad HU 2 HOME
 [![DATA-LOVE-2.jpg](https://i.postimg.cc/15XP2K1W/DATA-LOVE-2.jpg)](https://postimg.cc/t7KLVWTP)
 
-** Protoripo de baja fidelidad HU 2 MOVIES
+* Protoripo de baja fidelidad HU 2 MOVIES
 [![DATA-LOVE.png](https://i.postimg.cc/Y099XKxR/DATA-LOVE.png)](https://postimg.cc/47Dsd0qH)
 
-
+***
 
 ## Historia de Usuario 3
 
@@ -67,10 +68,10 @@ Y ordenar:
 * ordenar de la A a la Z
 * ordenar de la Z a la A
 
-** Prototipo de baja fidelidad HU 3 HOME
+* Prototipo de baja fidelidad HU 3 HOME
 [![DATA-LOVE-4.jpg](https://i.postimg.cc/wxLs3JfT/DATA-LOVE-4.jpg)](https://postimg.cc/K4cYHKhd)
 
-** Prototipo de baja fidelidad HU 3 CHARACTERS
+* Prototipo de baja fidelidad HU 3 CHARACTERS
 [![DATA-LOVE-3.jpg](https://i.postimg.cc/mgTnKL9T/DATA-LOVE-3.jpg)](https://postimg.cc/1fYMqZMd)
 
 
